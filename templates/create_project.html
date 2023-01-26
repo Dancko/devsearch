@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}Create a New Project{% endblock title %}
+    
+
+
+{% block content %}
+    <!-- Main Section -->
+    <main class="formPage my-xl">
+        <div class="content-box">
+            <div class="formWrapper">
+                <a class="backButton" href="{% url 'account' %}">&#8592;<i class="im im-angle-left"></i></a>
+                <br>
+
+                <form class="form" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% for field in form %}
+                    <!-- Input:Text -->
+                    <div class="form__field">
+                        <label for="formInput#text">{{ field.label }} </label>
+                        {{ field }}
+                    </div>
+                    {% endfor %}
+
+                    <div class="form__field">
+                        {% for tag in project.tags.all %}
+                            <div class="tag tag--pill tag--main project-tag" data-tag="{{tag.id}}" data-project="{{ project.id }}">{{ tag.name }} &#9747;</div>
+                        {% endfor %}
+                    </div>
+                    
+                    <div class="form__field">
+                        <label for="formInput#text">{{ field.label }} </label>
+                        <textarea name="newtags" class="input" placeholder="Add new tags here"></textarea>
+                    </div>
+
+
+                    <input class="btn btn--sub btn--lg  my-md" type="submit" value="Submit" />
+                </form>
+            </div>
+        </div>
+    </main>
+ 
+{% endblock content %}
+    
