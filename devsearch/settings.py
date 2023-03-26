@@ -102,8 +102,8 @@ DATABASES = {
 	'default': {
 		'ENGINE': 'django.db.backends.postgresql',
 		'NAME': 'devsearch',
-		'USER': 'ChubakaUzumaka',
-		'PASSWORD': 'Begl3Naro4Po-h24&',
+		'USER': None
+		'PASSWORD': None
 		'HOST': 'database-1.cpmohnibb8dl.us-east-1.rds.amazonaws.com',
 		'PORT': 5432
 	}
