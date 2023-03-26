@@ -147,8 +147,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'sandboxsandbox77@gmail.com'
-EMAIL_HOST_PASSWORD = 'rtxcldqkvofugtxw'
+EMAIL_HOST_USER = None
+EMAIL_HOST_PASSWORD = None
 
 
 # Static files (CSS, JavaScript, Images)
@@ -173,14 +173,14 @@ SESSION_COOKIE_SECURE = False
 CSRF_COOKIE_SECURE = False
 SECURE_SSL_REDIRECT = False
 
-app_password = 'rtxcldqkvofugtxw'
+app_password = None
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 AWS_QUERYSTRING_AUTH = False
 AWS_S3_FILE_OVERWRITE = False
-AWS_S3_ACCESS_KEY_ID = 'AKIAW4MGXP3NKVR7PU2Q'
-AWS_S3_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'devsearch228'
+AWS_S3_ACCESS_KEY_ID = None
+AWS_S3_SECRET_ACCESS_KEY = None
+AWS_STORAGE_BUCKET_NAME = None
 
 if os.getcwd() == '/app':
     DEBUG = False
